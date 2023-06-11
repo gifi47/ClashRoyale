@@ -13,18 +13,9 @@ public class EntityArcher : Entity
     [SerializeField]
     private float projectileSpeed = 3.6f;
 
-    [SerializeField]
-    private SkinnedMeshRenderer[] teamColorsBodyParts;
-
     private new void Start()
     {
         base.Start();
-        foreach (SkinnedMeshRenderer meshRenderer in teamColorsBodyParts) {
-            if (team == Team.Red)
-                meshRenderer.material = GameController.red;
-            else if (team == Team.Blue)
-                meshRenderer.material = GameController.blue;
-        }
         animator.SetFloat("attackStartDelay", 1 / (currentAttackDelay * 0.8f));
     }
 

@@ -219,6 +219,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5078410603901438374, guid: 0126985123d014d49bd8eaa56c8a748e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f3e88efc0b67874b8acbde4101d1800, type: 2}
     - target: {fileID: 919132149155446097, guid: 0126985123d014d49bd8eaa56c8a748e,
         type: 3}
       propertyPath: m_Name
@@ -229,6 +234,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0126985123d014d49bd8eaa56c8a748e, type: 3}
+--- !u!23 &5384798594026212149 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5923073190509037226, guid: 0126985123d014d49bd8eaa56c8a748e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7455605391786062435}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6988769578446247304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0126985123d014d49bd8eaa56c8a748e,
@@ -361,14 +372,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a31631e0ec293ee4a938ac4f9cf1cf04,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 3746498718256498471}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a31631e0ec293ee4a938ac4f9cf1cf04,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4699374797019542512}
   m_SourcePrefab: {fileID: 100100000, guid: a31631e0ec293ee4a938ac4f9cf1cf04, type: 3}
---- !u!137 &303432181244048638 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -419888331031936294, guid: a31631e0ec293ee4a938ac4f9cf1cf04,
-    type: 3}
-  m_PrefabInstance: {fileID: 9086645839916152356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &4121017105386335397 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5128063986421979777, guid: a31631e0ec293ee4a938ac4f9cf1cf04,
@@ -422,9 +431,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 80ecd18e127da4d4287a1544e89081d4, type: 2}
   textMeshPro: {fileID: 5711299802789999287}
-  teamColorsBodyParts:
+--- !u!114 &3746498718256498471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8276254844213693301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a6fa98539f47647b107f1e1bcd655e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
   - {fileID: 4121017105386335397}
-  - {fileID: 303432181244048638}
+  - {fileID: 5384798594026212149}
 --- !u!195 &4699374797019542512
 NavMeshAgent:
   m_ObjectHideFlags: 0

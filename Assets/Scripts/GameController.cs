@@ -26,7 +26,6 @@ public static class GameController
     // add all teams
     public static void Initialize()
     {
-        Debug.Log(Vector3.Distance(new Vector3(9.20167065f, 2.03821254f, -0.379106075f), new Vector3(9.36999989f, 0.730000019f, 0f)));
         foreach (Team teams in (Team[])Enum.GetValues(typeof(Team)))
         {
             entities.Add(teams, new List<GameObject>());

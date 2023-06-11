@@ -56,10 +56,6 @@ public class Entity : MonoBehaviour, ITargetable
     protected void Start()
     {
         ResetStats();
-        if (team == Team.Blue)
-            GetComponentInChildren<MeshRenderer>().material = GameController.blue;
-        else
-            GetComponentInChildren<MeshRenderer>().material = GameController.red;
         state = State.Search;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();

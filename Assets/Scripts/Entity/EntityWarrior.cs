@@ -9,9 +9,6 @@ public class EntityWarrior : Entity
     [SerializeField]
     private TextMeshPro textMeshPro;
 
-    [SerializeField]
-    private SkinnedMeshRenderer[] teamColorsBodyParts;
-
     private new void Start()
     {
         base.Start();
@@ -28,13 +25,6 @@ public class EntityWarrior : Entity
 
         healthTextConstraint.SetTranslationOffset(0, new Vector3(0, 0.65f, 0));
         textMeshPro.text = $"{currentHealth}/{stats.maxHealth}";
-        foreach (SkinnedMeshRenderer meshRenderer in teamColorsBodyParts)
-        {
-            if (team == Team.Red)
-                meshRenderer.material = GameController.red;
-            else if (team == Team.Blue)
-                meshRenderer.material = GameController.blue;
-        }
     }
 
     public override void ReceiveDamage(float damageValue)

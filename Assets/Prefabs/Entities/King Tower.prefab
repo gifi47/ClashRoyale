@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5921084624789431253}
   - component: {fileID: 1327185866938274718}
   - component: {fileID: 7198177106827648742}
+  - component: {fileID: 8036585362072868814}
   m_Layer: 0
   m_Name: King Tower
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5921084624789431253
 MeshFilter:
@@ -100,3 +101,17 @@ MonoBehaviour:
   projectile: {fileID: 2923082056079174301, guid: 1182607cd472ce44ebb31942963ba666,
     type: 3}
   offset: {x: 0, y: 1, z: 0}
+--- !u!114 &8036585362072868814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953739408535696268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a6fa98539f47647b107f1e1bcd655e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 1327185866938274718}

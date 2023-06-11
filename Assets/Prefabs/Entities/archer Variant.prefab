@@ -123,6 +123,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f18befdb9c7f0e546976f29682af7978,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7745660870607497061}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f18befdb9c7f0e546976f29682af7978,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6645131924242971935}
   m_SourcePrefab: {fileID: 100100000, guid: f18befdb9c7f0e546976f29682af7978, type: 3}
 --- !u!137 &3449738174376908103 stripped
@@ -154,8 +158,21 @@ MonoBehaviour:
     type: 3}
   offset: {x: 0, y: 0, z: 0}
   projectileSpeed: 10
-  teamColorsBodyParts:
+--- !u!114 &7745660870607497061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220409575357149847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a6fa98539f47647b107f1e1bcd655e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
   - {fileID: 3449738174376908103}
+  - {fileID: 4366667387033190093}
 --- !u!195 &6645131924242971935
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -302,6 +319,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ca79599e66a3af409bfac39049c355e, type: 3}
+--- !u!23 &4366667387033190093 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3963665015010100459, guid: 2ca79599e66a3af409bfac39049c355e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8387883323250738648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8353339534422172211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ca79599e66a3af409bfac39049c355e,

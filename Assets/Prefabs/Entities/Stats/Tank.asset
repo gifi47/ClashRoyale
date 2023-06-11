@@ -17,6 +17,6 @@ MonoBehaviour:
   baseSpeed: 0.8
   baseAttackDelay: 0.5
   baseAttackEndDelay: 0.5
-  baseAttackRange: 1.25
+  baseAttackRange: 2.4
   baseSearchRange: 8
   baseDamage: 16
