@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    GameObject target;
-    float speed = 0f;
-    IEffect effect;
+    protected GameObject target;
+    protected float speed = 0f;
+    protected IEffect effect;
 
     public static void Launch(Projectile projectile, GameObject target, float speed)
     {
@@ -28,17 +28,27 @@ public class Projectile : MonoBehaviour
     {
         if (target == null) 
         {
-            Destroy(this.gameObject); 
+            OnLoseTarget();
             return; 
         }
-        if (Vector3.Distance(target.transform.position, this.transform.position) < 0.2f) 
+        if (Vector3.Distance(target.transform.position, this.transform.position) < speed * Time.fixedDeltaTime) 
         {
-            target.GetComponent<ITargetable>().AddEffect(effect);
-            Destroy(this.gameObject); 
+            OnImpact();
             return;
         }
         Vector3 direction = (target.transform.position - this.transform.position).normalized;
         this.transform.rotation = Quaternion.LookRotation(direction);
         this.transform.position += direction * speed * Time.fixedDeltaTime;
+    }
+
+    protected virtual void OnLoseTarget()
+    {
+        Destroy(this.gameObject);
+    }
+
+    protected virtual void OnImpact()
+    {
+        target.GetComponent<ITargetable>().AddEffect(effect);
+        Destroy(this.gameObject);
     }
 }
