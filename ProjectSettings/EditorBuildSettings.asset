@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 480188dc9380a3c479233632bf2a3216
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BattleArena.unity
     guid: 3a68926802f4c1c458572e17341d0699
+  - enabled: 1
+    path: Assets/Scenes/TestSceneForAhri.unity
+    guid: f3a65dbcb31348042a6ca5efad1e8b1c
   m_configObjects: {}

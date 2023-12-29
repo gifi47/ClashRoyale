@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class DeckController : MonoBehaviour
 {
@@ -53,16 +52,10 @@ public class DeckController : MonoBehaviour
             itemTransform.offsetMin = new Vector2(0, 0);
             itemTransform.offsetMax = new Vector2(0, 0);
 
-            string k = i.ToString();
-            storageItem.GetComponent<Button>().onClick.AddListener(() => { StorageItemOnClick(itemTransform, System.Convert.ToInt32(k)); });
+            var k = i;
+            storageItem.GetComponent<Button>().onClick.AddListener(() => { StorageItemOnClick(itemTransform, k); });
             storageItem.GetComponent<Image>().sprite = cards[i].sprite;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void StorageItemOnClick(RectTransform itemTransform, int item) 
@@ -90,7 +83,6 @@ public class DeckController : MonoBehaviour
 
     public void UpdateDeckImage(int item)
     {
-        Debug.Log($"sel={selected}item={item}");
         deckItemsImages[item].sprite = cards[deck[item]].sprite;
     }
 
